@@ -1,0 +1,7 @@
+streamlit
+tensorflow
+tf-keras
+numpy
+pillow
+scikit-learn
+google-generativeai
