@@ -3,5 +3,5 @@ tensorflow
 numpy
 pillow
 scikit-learn
-google-genai
+google-generativeai
 streamlit-mic-recorder
