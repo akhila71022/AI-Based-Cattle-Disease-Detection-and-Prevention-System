@@ -1,2 +1,75 @@
-# AI-Based-Cattle-Disease-Detection-and-Prevention-System
-A real world problem
+# AI Based Cattle Disease Detection and Prevention System
+
+## Project Overview
+
+This project uses Deep Learning to identify possible cattle diseases from an uploaded image.
+
+The system classifies cattle images into:
+
+- Healthy
+- Foot and Mouth Disease
+- Lumpy Skin Disease
+
+The application also uses Gemini AI to provide general information about symptoms, precautions, and when to contact a veterinarian.
+
+> Note: This project is an AI screening tool only. It does not replace a veterinarian's diagnosis.
+
+---
+
+## Features
+
+- Upload cattle image
+- Camera image input
+- Disease prediction
+- Confidence percentage
+- Prediction probability chart
+- English and Telugu language support
+- Gemini AI general disease information
+- Project-only chatbot that declines unrelated questions
+- Microphone input for spoken English or Telugu cattle/project questions
+- Streamlit web application
+- Sidebar with project and team information
+
+---
+
+## Technologies Used
+
+- Python
+- TensorFlow
+- Keras
+- MobileNetV2
+- Streamlit
+- NumPy
+- Pillow
+- scikit-learn
+- Google Generative AI
+
+## Setup
+
+1. Train and export the model by running all cells in `cattle.ipynb`. This creates
+   `cattle_disease_model.keras` and `class_names.json` beside `app.py`.
+2. Install dependencies with `pip install -r requirements.txt`.
+3. Set your Gemini key before starting the app (do not place it in `app.py`):
+
+```powershell
+$env:GEMINI_API_KEY="your-key-here"
+streamlit run app.py
+```
+
+---
+
+## Model Used
+
+This project uses **MobileNetV2**, a lightweight Convolutional Neural Network model.
+
+MobileNetV2 is used because:
+
+- It is fast.
+- It is suitable for image classification.
+- It uses transfer learning.
+- It works well with limited resources.
+
+The input image is resized to:
+
+```text
+224 × 224 pixels
